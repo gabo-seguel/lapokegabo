@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_pokemon: 1
+  name: MyString
+  elemental_type: MyString
+  main_skills: MyString
+  total_skills: 1
+  height: 1
+  weight: 1
+
+two:
+  id_pokemon: 1
+  name: MyString
+  elemental_type: MyString
+  main_skills: MyString
+  total_skills: 1
+  height: 1
+  weight: 1
