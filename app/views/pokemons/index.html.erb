@@ -1,14 +1,20 @@
-<h1>Pokemons</h1>
-<% @pokemons.each do |pokemon| %>
-    <%= link_to showpokemon_path(pokemon.id_pokemon) do%>
-        <h2><%= pokemon.name%></h2>
-        <h2><%= pokemon.elemental_type%></h2>
-    <%end%>
-<%end%>
+<h2>Listado de Pokemones</h2>
+
+<%= form_with url: showpokemon_path(0), method: :get, local: true do |f| %>
+    <%= f.text_field :q, placeholder: "Buscar por ID o nombre" %>
+    <%= f.submit "Buscar" %>
+<% end %> 
+  
+<ul>
+    <% @paginated_pokemons.each do |pokemon| %>
+        <%= link_to showpokemon_path(pokemon["name"]) do %>
+            <li><%= pokemon["name"].capitalize%></li>
+        <% end %>
+    <% end %>
+</ul> 
 
 
+<div class="pagination">
+  <%= paginate @paginated_pokemons %>
+</div>
 
-
-
-
-<h3><%= Date.today%></h3>

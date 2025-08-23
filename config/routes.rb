@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get '/', to: 'pokemons#index', as: :index
-  get '/:id_pokemon', to: 'pokemons#showpokemon', as: :showpokemon 
-  get '/addfavorite', to: 'pokemons#addfavorite'
-  get '/showfavorite', to: 'pokemons#showfavorite'
+  get '/showpokemon/:pokemon_name', to: 'pokemons#showpokemon', as: :showpokemon 
+  post '/addfavorites', to: 'pokemons#addfavorites', as: :addfavorites
+  get '/showfavorites', to: 'pokemons#showfavorites', as: :showfavorites
 end

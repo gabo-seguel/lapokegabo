@@ -1,19 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id_pokemon: 1
-  name: MyString
-  elemental_type: MyString
-  main_skills: MyString
+  id_pokemon: 19
+  name: rattata
+  elemental_type: normal
+  main_skills: run-away
   total_skills: 1
-  height: 1
-  weight: 1
+  height: 35
+  weight: 3
 
 two:
   id_pokemon: 1
-  name: MyString
-  elemental_type: MyString
-  main_skills: MyString
-  total_skills: 1
-  height: 1
-  weight: 1
+  name: bulbasaur
+  elemental_type: grass
+  main_skills: overgrow
+  total_skills: 86
+  height: 69
+  weight: 7

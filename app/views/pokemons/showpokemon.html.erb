@@ -1,1 +1,46 @@
-<%= @pokemon.name%>
+<%if !@pokemon[:error]%> 
+    <%= image_tag @pokemon[:image] %>
+    <h3><%= @pokemon[:name].capitalize %></h3>
+    <p><strong>Tipo:</strong> <%= @pokemon[:elemental_type] %></p>
+    <p><strong>Peso:</strong> <%= @pokemon[:weight]%><%=" Kg"%></p>
+    <p><strong>Altura:</strong> <%= @pokemon[:height] %><%=" Pie"%></p>
+    <p><strong>Total Habilidades:</strong> <%= @pokemon[:total_skill] %></p>
+
+    <p><strong>Habilidades Especiales:</strong></p>
+    <ul>
+    <% @pokemon[:main_skill].each do |skill| %>
+        <li><%= skill %></li>
+    <% end %>
+    </ul>
+    <div>
+        <%= button_to "Agregar a Favoritos",
+            addfavorites_path(params: { 
+            id_pokemon:     @pokemon[:id],
+            name:           @pokemon[:name],
+            elemental_type: @pokemon[:elemental_type],
+            main_skill:     @pokemon[:main_skill],
+            total_skill:    @pokemon[:total_skill],
+            height:         @pokemon[:height],
+            weight:         @pokemon[:weight]
+            }),
+            method: :post,
+            class: "btn btn-primary" 
+        %>
+    </div>
+
+    <div>
+        <%= button_to "Mostrar Favoritos", showfavorites_path(), method: :get, class: "btn btn-primary" %>
+    </div>
+    
+
+    <% if notice %>
+        <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+
+    <%= link_to "Volver al Inicio", index_path, class: "btn btn-inverse" %>
+
+<%else%> 
+    <h1>Pokemon no encontrado</h1>
+    <%= link_to "Volver al Inicio", index_path, class: "btn btn-inverse"%>   
+<%end%>
+

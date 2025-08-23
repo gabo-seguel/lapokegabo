@@ -1,0 +1,11 @@
+<ul>
+  <% if @show_favorites_pokemons.any? %>
+    <% @show_favorites_pokemons.each do |pokemon| %>
+      <li><%= pokemon["name"].capitalize %></li>
+    <% end %>
+  <% else %>
+    <li>No hay pokemones en favoritos</li>
+  <% end %>
+</ul>
+
+<%= link_to "Volver al Inicio", index_path %>
