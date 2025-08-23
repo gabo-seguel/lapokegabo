@@ -1,4 +1,4 @@
-# README
+# LA POKE GABO
 
 ## Instrucciones de instalación
 Se deben usar las siguientes versiones de ruby y rails.
@@ -52,7 +52,7 @@ Ejecutar todos los tests de la aplicación
 2. **Controlador: PokemonsController Metodo: addfavorites**
    - Solo agrega un pokemon si no está en favoritos.
 
-## Desiciones de diseño
+## Decisiones de diseño
 Arquitectura MVC + Service Objects:
 La aplicación sigue la arquitectura clásica de Rails (MVC):
 - Modelos: FavoritePokemon
