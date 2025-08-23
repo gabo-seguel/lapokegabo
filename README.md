@@ -67,3 +67,14 @@ Conexión con API externa
 
 Paginación
 - Se utiliza la gema Kaminari para mostrar pokemon en el índice de 20 en 20.
+
+## Images de presentacion POKE GABO
+- Pantalla inicial (index)
+<img width="477" height="610" alt="image" src="https://github.com/user-attachments/assets/d836cbba-37d7-4c6f-ae77-42f35efca8e6" />
+
+- Pantalla que muestra informacion de un pokemon
+<img width="612" height="603" alt="image" src="https://github.com/user-attachments/assets/d153c5ca-0999-4845-9676-9d1e44397761" />
+
+
+
+
